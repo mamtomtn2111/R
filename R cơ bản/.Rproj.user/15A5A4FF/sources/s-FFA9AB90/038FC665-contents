@@ -1,0 +1,30 @@
+#Ex1
+#Write the R code that calculates the median value 
+#(use the median() function) of the gpa variable in student_data. 
+#All you need to do is pass the student_id vector into the median() function.
+#To read about the median() function, just execute the following in your R session: ?median
+
+my_list <- list(classes_offered = c("MIS 431", "MIS 310", "MIS 410", "MIS 412"),
+                student_data = data.frame(student_id = c(54, 100, 32, 423, 
+                                                         2, 19, 39),
+                                          age = c(18, 22, 27, 18, 29, 
+                                                  22, 20),
+                                          gpa = c(3.1, 2.8, 3.7, 3.4, 3.2, 
+                                                  3.4, 3.2),
+                                          stringsAsFactors = FALSE))
+meadianGpa <- median(my_list$student_data$gpa)
+
+
+
+#ex2
+#Subset my_data_frame to only include rows that have a cylinders value of 4.
+my_data_frame <- data.frame(make = c("Toyota","Honda","Ford", "Toyota", 
+                                     "Ford", "Honda"),
+                            mpg = c(34, 33, 22, 32, 29, 27),
+                            cylinders = c(4, 4, 8, 6, 6, 8))
+
+Subset4Clyinders <- my_data_frame[my_data_frame$cylinders == 4,]
+View(Subset4Clyinders)
+
+summarise
+

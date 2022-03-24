@@ -1,0 +1,28 @@
+library(corrplot)
+library(ggplot2)
+library(ggcorrplot)
+library(dplyr)
+library(MASS)
+data(SaratogaHouses, package = "mosaicData")
+
+mydata <- select_if(SaratogaHouses, is.numeric)
+cordata <- cor(mydata,use = "complete.obs")
+cordata <- round(cor_data, 2)
+cordata
+ggcorrplot(cordata)
+ggcorrplot(cordata, hc.order = TRUE,
+          type = "lower", lab = TRUE)
+
+data("mtcars")
+mtcarscordata <- cor(mtcars,use = "complete.obs")
+ggcorrplot(mtcarscordata)
+ggcorrplot(mtcarscordata, hc.order = TRUE,
+           type = "lower", lab = TRUE)
+
+data("Boston")
+Bostoncordata <- cor(Boston,use = "complete.obs")
+ggcorrplot(Bostoncordata)
+ggcorrplot(Bostoncordata, hc.order = TRUE,
+           type = "lower", lab = TRUE)
+
+

@@ -1,0 +1,43 @@
+---
+title: "CLC Nycflight HomeWork"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
+```
+
+## R Markdown
+
+BÀI TẬP VỀ NHÀ NycFlight \
+Họ tên: Nguyễn Vũ Hải \
+MSV: DTC195480201CLC0006 \
+
+##Import data and library
+```{r}
+library(dplyr)
+library(nycflights13)
+library(ggplot2)
+library(magrittr)
+data(flights)
+```
+
+
+##Question 1
+
+How many flights were carried out at the first day of January 2013?
+
+```{r cars}
+flights %>% 
+  filter(day == 1, month == 1, year == 1)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

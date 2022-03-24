@@ -1,0 +1,14 @@
+"0","plot(pressure)"
+"2","Warning in (function (filename = ""Rplot%03d.png"", width = 480, height = 480,  :"
+"2","
+ "
+"2"," unable to open file 'G:/Tài li?u h?c t?p/2021-2022/HK2/Tr?c quan hóa d? li?u/FileProject/TH16-2/.Rproj.user/shared/notebooks/-nycflightCLCMarkDown/1/s/c5tvs5qen61gx_t/_rs_chunk_plot_001.png' for writing
+"
+"2","Warning in (function (filename = ""Rplot%03d.png"", width = 480, height = 480,  :"
+"2","
+ "
+"2"," opening device failed
+"
+"2","Error in (function (filename = ""Rplot%03d.png"", width = 480, height = 480,  : 
+  unable to start png() device
+"

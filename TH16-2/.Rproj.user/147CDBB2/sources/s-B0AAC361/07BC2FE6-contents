@@ -1,0 +1,13 @@
+library(dplyr)
+library(nycflights13)
+library(ggplot2)
+
+data(flights)
+#Câu 1
+flights %>% 
+  filter(day == 1 & month == 1 & year == 1) ->flightsFirstDay
+
+count(flightsFirstDay)
+
+
+

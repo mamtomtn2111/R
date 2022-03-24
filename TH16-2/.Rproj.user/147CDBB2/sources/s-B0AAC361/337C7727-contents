@@ -1,0 +1,52 @@
+library(leaflet)
+#install.packages("leaflet")
+#install.packages("dplyr")
+library(dplyr)
+
+leaflet() %>%
+  addTiles() %>%
+  addMarkers(lng = 105.831030, lat = 21.654640,
+             popup = "Heeeeeeeeeeeeeee")
+#Using the plotly to make the interactive graphs
+library(plotly)
+library(ggplot2)
+data(mpg, package = )
+
+
+# Library highcharter làm việc với dữ liệu dài 
+library(highcharter)
+library(gapminder)
+data(gapminder)
+asia <- gapminder %>%
+  filter(continent == "Asia") %>%
+  select(year, country, lifeExp)
+library(tidyr)  # using for transformation shape of Dataset
+library(highchart)
+plotdata <- spread(asia, country, lifeExp)
+#Make the highcharter graph
+highchart() %>% 
+  hc_xAxis(categories = plotdata$year) %>% 
+  hc_add_series(name = "Vietnam", data = plotdata$Vietnam) %>% 
+  hc_add_series(name = "China", data = plotdata$China) %>% 
+  hc_add_series(name = "Iran", data = plotdata$Iran) %>% 
+  hc_add_series(name = "Cambodia", data = plotdata$Cambodia) %>% 
+  hc_add_series(name = "Japan", data = plotdata$Japan) %>% 
+  hc_add_series(name = "Myanmar", data = plotdata$Myanmar) -> plot1
+
+plot1
+
+plot1 <- plot1 %>% 
+  hc_title(text = "Life expectancy by country in asia",
+           margin = 30, align = "center",
+           style = list(color = "stellblue", fontWeight = "bold")) %>% 
+  hc_subtitle(text = "From 1952 to 2007", margin = 20, align = "left",
+              style = list(color = "red", fontWeight = "bold")) %>% 
+  hc_credits(enabled = TRUE, text = "Gapminder data",
+             href = "http://gapminder.com") %>% 
+  hc_legend(align = "left", layout = "vertical",
+            x = 0, y = 100, verticalAlign = "top") %>% 
+  hc_tooltip(crosshairs = TRUE, backgroundColors = "#FCFFC5",
+             shared = TRUE, borderWidth = 4) %>% 
+  hc_exporting(enabled = TRUE)
+
+plot1
