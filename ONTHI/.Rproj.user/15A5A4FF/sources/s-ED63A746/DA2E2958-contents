@@ -1,4 +1,0 @@
-library(gapminder)
-install.packages("ISLR")
-library("ISLR")
-data(wages)
