@@ -18,3 +18,13 @@ MCZone^2
 steadyStates(MCZone)
 
 data("rain", package = "markovchain")
+table(rain$rain)
+
+mcAlofi <- markovchainFit(data = rain$rain, name = "Alofi MC")$estimate
+mcAlofi
+transientStates(mcAlofi)
+is.accessible(mcAlofi)
+s0 <- t(as.matrix(c(0,1,0)))
+s3 <- s0 * (mcAlofi^3) ; s3
+s8 <- s0 * (mcAlofi^8) ; s8
+steadyStates(mcAlofi)
