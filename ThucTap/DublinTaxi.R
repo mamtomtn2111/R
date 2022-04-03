@@ -16,3 +16,5 @@ MCZone <- new("markovchain", states = DriverZone,
 
 MCZone^2
 steadyStates(MCZone)
+
+data("rain", package = "markovchain")
