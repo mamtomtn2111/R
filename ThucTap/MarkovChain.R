@@ -151,7 +151,8 @@ mathematicaMc <- new("markovchain", transitionMatrix = mathematicaMatr,
                      name = "Mathematica MC", states = statesNames)
 
 plot(mathematicaMc)
-
+absorbingStates(mathematicaMc)
+steadyStates(mathematicaMc)
 .firstpassageKernel <- function (P, i, n) {
   G <- P
   H <- P[i,]
