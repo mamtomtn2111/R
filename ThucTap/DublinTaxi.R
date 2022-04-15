@@ -28,3 +28,4 @@ s0 <- t(as.matrix(c(0,1,0)))
 s3 <- s0 * (mcAlofi^3) ; s3
 s8 <- s0 * (mcAlofi^8) ; s8
 steadyStates(mcAlofi)
+summary(mcAlofi)
