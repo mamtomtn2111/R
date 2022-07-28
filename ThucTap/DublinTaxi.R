@@ -29,3 +29,4 @@ s3 <- s0 * (mcAlofi^3) ; s3
 s8 <- s0 * (mcAlofi^8) ; s8
 steadyStates(mcAlofi)
 summary(mcAlofi)
+plot(mcAlofi)

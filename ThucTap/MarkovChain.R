@@ -6,6 +6,7 @@ mcWeather <- new("markovchain", states = c("sunny", "cloudy", "rain"),
                                                     0.3, 0.4, 0.3,
                                                     0.2, 0.45, 0.35), byrow = TRUE, nrow = 3),
                  name = "weather")
+mcWeather
 
 #Thuong
 initialState <- c(0, 1 ,0)
@@ -174,6 +175,9 @@ weatherOfDays[1:30]
 weatherFittedMLE <- markovchainFit(data = weatherOfDays,
                                    method = "mle",name = "Weather MLE") 
 weatherFittedMLE$estimate
+
+weatherPredict <- predict(object = weatherFittedMLE$estimate, newdata = c("rain"),
+                          n.ahead = 3)
 
 weatherFittedLAPLACE <- markovchainFit(data = weatherOfDays,
                                        method = "laplace", laplacian = 0.01,
